@@ -43,7 +43,7 @@ var descricaoCard3 = document.getElementById('descricaoCard3')
 var aCard3 = document.getElementById('aCard3')
 
 
-const cards = [
+const cards = [  //INFORMAÇÕES Q VÃO ESTAR PRESENTES NA PÁGINA LUGAR
     {
     nome: 'Pico da Bandeira',
     lugar: 'Alto Caparaó - MG / Ibitirama - ES',
@@ -140,6 +140,8 @@ const cards = [
     funcao: 'zoo()'
     }
 ]
+
+//FUNÇÕES PARA ESCOLHER UM CARD ALEATÓRIO DA CONST CARDS
 
 function card1() {
     var pos = Math.floor(Math.random() * cards.length)    
