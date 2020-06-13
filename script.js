@@ -272,7 +272,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         endereco.innerHTML = 'R. Darcy Ribeiro Castro, 121 - Iriri, Anchieta - ES, 29230-000'
         distancia.innerHTML = '93 km da capital Vitória - ES'
         mapa.setAttribute('href', 'https://goo.gl/maps/4C6P48UtueNTjjPP9')
-        descricao.innerHTML = 'Escolhida a dedo por nossa equipe, a Praia dos Namorados foi eleita a melhor das praias do Balneário de Iriri. Locazida mais distante do início do balneário, a praia é uma das mais tranquilas da região. Com ondas na medida certa e não sendo tão profunda, toda a família pode aproveitar da diversão sem se preocupar demais. Ela também possui um costão no qual é possível ver tartarugas em certos períodos do ano.'
+        descricao.innerHTML = 'Escolhida a dedo por nossa equipe, a Praia dos Namorados foi eleita a melhor das praias do Balneário de Iriri. Localizada mais distante do início do balneário, a praia é uma das mais tranquilas da região. Com ondas na medida certa e não sendo tão profunda, toda a família pode aproveitar da diversão sem se preocupar demais. Ela também possui um costão no qual é possível ver tartarugas em certos períodos do ano.'
     
         card1()
         card2()
@@ -326,7 +326,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         endereco.innerHTML = 'Rua Dezessete, 101 - Anchieta, ES, 29230-000'
         distancia.innerHTML = '88 km da capital Vitória - ES'
         mapa.setAttribute('href', 'https://goo.gl/maps/hPj9JgHVFqyfi5sP6')
-        descricao.innerHTML = 'As Ruínas do Rio Salinas se situam em meio a natureza, ao lado do Rio Salinas, que é um dos afluentes do Rio Beneventes. Para chegar até as ruínas, pode se ir pela estrada ou por meio de embarcações que passam pelo Rio Benevides, que se torna outro passeio por si só, pois é possível admirar toda a exuberância da fauna e flora do manguezal que cerca o rio. Umas das hipóteses mais aceitas era que as ruínas seriam o início de uma igreja que os jesuítas presentes na época queriam construir, pois nessa região haviam muitos povos indígenas.'
+        descricao.innerHTML = 'As Ruínas do Rio Salinas se situam em meio a natureza, ao lado do Rio Salinas, que é um dos afluentes do Rio Beneventes. Para chegar até as ruínas, pode-se ir pela estrada ou por meio de embarcações que passam pelo Rio Benevides, que se torna outro passeio por si só, pois é possível admirar toda a exuberância da fauna e flora do manguezal que cerca o rio. Umas das hipóteses mais aceitas era que as ruínas seriam o início de uma igreja que os jesuítas presentes na época queriam construir, pois nessa região haviam muitos povos indígenas.'
     
         card1()
         card2()
@@ -398,7 +398,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         endereco.innerHTML = 'R. Orlindo Donadello, s/n, Alfredo Chaves - ES, 29240-000'
         distancia.innerHTML = '90 km da capital Vitória - ES'
         mapa.setAttribute('href', 'https://goo.gl/maps/xGp6yXenPiUKZqFx5')
-        descricao.innerHTML = 'A Cachoeira de Matilde, também conhecida como Cachoeira do Engenheiro Reeve, possui a maior queda livre de água de todo o Estado do Espírito Santo. É possível seguir uma trilha, que fica logo depois do mirante da cachoeira e chegar até por de trás dela, ou se preferir, tomar um banho na lagoa formada pela mesma. Nas redondezas da cachoeira, você também pode visitar uma antiga estação ferróviaria que foi construída pelos imigrantes da região.'
+        descricao.innerHTML = 'A Cachoeira de Matilde, também conhecida como Cachoeira do Engenheiro Reeve, possui a maior queda livre de água de todo o Estado do Espírito Santo. É possível seguir uma trilha, que fica logo depois do mirante da cachoeira e chegar até por de trás dela, ou se preferir, tomar um banho na lagoa formada pela mesma. Nas redondezas da cachoeira, você também pode visitar uma antiga estação ferroviária que foi construída pelos imigrantes da região.'
     
         card1()
         card2()
@@ -452,7 +452,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         endereco.innerHTML = 'Estrada do Rio Fundo, s/n, Mal. Floriano - ES, 29255-000'
         distancia.innerHTML = '59.6 km da capital Vitória'
         mapa.setAttribute('href', 'https://goo.gl/maps/oRbfEg2earyaMf1s5')
-        descricao.innerHTML = 'Atualmente, o zoológico Zoo Park da Montanha é o único presente no Estado do Espírito Santo. Desde 2012, o ano em que o zoológico foi fundado, ele já conta com as espécies mais váriadas de animais, desde aves a primatas, e agora, também já possui felinos de grande porte, como leão e onças-pintadas. Outra parte que chama muito a atenção dos visitantes é a ala dos répteis, que conta com incríveis cobras, serpentes e largatos'
+        descricao.innerHTML = 'Atualmente, o zoológico Zoo Park da Montanha é o único presente no Estado do Espírito Santo. Desde 2012, o ano em que o zoológico foi fundado, ele já conta com as espécies mais variadas de animais, desde aves a primatas, e agora, também já possui felinos de grande porte, como leão e onças-pintadas. Outra parte que chama muito a atenção dos visitantes é a ala dos répteis, que conta com incríveis cobras, serpentes e largatos'
     
         card1()
         card2()
@@ -470,7 +470,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         endereco.innerHTML = 'Av. Oceano Atlântico, s/n - Guriri Norte, São Mateus - ES, 29946-550'
         distancia.innerHTML = '226 km da capital Vitória - ES'
         mapa.setAttribute('href', 'https://goo.gl/maps/qEtUijPSLrJC2oC67')
-        descricao.innerHTML = 'Bem como outras bases do Projeto Tamar, a base de Guriri tem como objetivo a proteger as tartarugas marinhas ques estão a beira da extinçãono litoral brasileiro. Atualmente, o Projeto Tamar não se restinge mais a conservação apenas das tartarugas, mas também de tubarões e de outras espécies de vida marinha. Poucos anos atrás, a base de Guriri passou por uma reforma e agora também conta com espaço onde são ministradas palestras voltadas ao meio ambiente como um todo.'
+        descricao.innerHTML = 'Bem como outras bases do Projeto Tamar, a base de Guriri tem como objetivo proteger as tartarugas marinhas que estão a beira da extinção no litoral brasileiro. Atualmente, o Projeto Tamar não se restinge mais a conservação apenas das tartarugas, mas também de tubarões e de outras espécies de vida marinha. Poucos anos atrás, a base de Guriri passou por uma reforma e agora também conta com espaço onde são ministradas palestras voltadas ao meio ambiente como um todo.'
     
         card1()
         card2()
@@ -506,7 +506,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         endereco.innerHTML = 'Domingos Martins - ES, 29260-000'
         distancia.innerHTML = '94.3 km da capital Vitória - ES'
         mapa.setAttribute('href', 'https://goo.gl/maps/b1vXYmYNGuJguD776')
-        descricao.innerHTML = 'A antiga Reserva Florestal de Pedra Azul, criada em 1960, foi transformada em Parque Estadual da Pedra Azul, no ano de 1991. O parque abriga um dos principais pontos turísticos do Estado do Espírito Santo, a Pedra Azul com cerca de 1822 metros de altura, sendo este um dos cartões postais mais imponentes de paisagem natural do Estado. Juntamente com a Pedra Azul, há a Pedra do Lagarto, compondo assim um belo cenário natural. Além disso, o paque também abriga diversas espécies vegetais, desde orquídeas e bromélias a cássias e ipês.'
+        descricao.innerHTML = 'A antiga Reserva Florestal de Pedra Azul, criada em 1960, foi transformada em Parque Estadual da Pedra Azul, no ano de 1991. O parque abriga um dos principais pontos turísticos do Estado do Espírito Santo, a Pedra Azul com cerca de 1822 metros de altura, sendo este um dos cartões postais mais imponentes de paisagem natural do Estado. Juntamente com a Pedra Azul, há a Pedra do Lagarto, compondo assim um belo cenário natural. Além disso, o parque também abriga diversas espécies vegetais, desde orquídeas e bromélias a cássias e ipês.'
     
         card1()
         card2()
@@ -560,7 +560,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         endereco.innerHTML = 'R. Vasco Coutinho, 1-3 - Centro de Vila Velha, Vila Velha - ES, 29100-231'
         distancia.innerHTML = '8.5 km da capital Vitória - ES'
         mapa.setAttribute('href', 'https://goo.gl/maps/gPJF1mU3GrVm6Cud9')
-        descricao.innerHTML = 'O Convento da Penha teve a sua construção feita no alto de um penhasco de 154 metros de altitude por volta dos anos de 1558, sendo esta considerado um dos santuários religiosos mais antigos do Brasil. O convento foi tombado como patrimônio histórico cultural pelo Instituto do Patrimônio Histórico e Artístico Nacional, em 1943. O complexo do convento abriga vários outros atrativos, como a Gruta do Frei Pedro Palácios e o largo do convento, além do Museu. No Altar Mor da Igreja, há mais de 200 peças de 19 tipos diferentes de mármore que adornam o retábulo e colunas.'
+        descricao.innerHTML = 'O Convento da Penha teve a sua construção feita no alto de um penhasco de 154 metros de altitude por volta dos anos de 1558, sendo este considerado um dos santuários religiosos mais antigos do Brasil. O convento foi tombado como patrimônio histórico cultural pelo Instituto do Patrimônio Histórico e Artístico Nacional, em 1943. O complexo do convento abriga vários outros atrativos, como a Gruta do Frei Pedro Palácios e o largo do convento, além do Museu. No Altar Mor da Igreja, há mais de 200 peças de 19 tipos diferentes de mármore que adornam o retábulo e colunas.'
     
         card1()
         card2()
@@ -596,7 +596,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         endereco.innerHTML = 'Av. Oceano Atlântico - Guriri, ES'
         distancia.innerHTML = '227 km da capital Vitória - ES'
         mapa.setAttribute('href', 'https://goo.gl/maps/d3YMLY1R2SPAuf6f9')
-        descricao.innerHTML = 'A Ilha de Guriri é a maior ilha do Estado do Espírito Santo, possuindo 102 km² de área e 42 km de extensão de praia. A Capela dos Navegantes, que foi construída em 1975 em homenagem a Iemanjá, está localizada na parte centra da faixa litorânea. A Área do Surf, ideal para quem gosta de se aventurar no mar, e fica mais a extrema direita da praia. Além disso, há uma região com bosque à beira mar, para quem gosta de fazer churrasco com os amigos e família. E para os mais aventureiroshá também a opção da Praia do Pontal do Cricaré, localizado a 14 km do Centro de Guriri, sendo necessário realizar uma pequena trilha para chegar a mesma.'
+        descricao.innerHTML = 'A Ilha de Guriri é a maior ilha do Estado do Espírito Santo, possuindo 102 km² de área e 42 km de extensão de praia. A Capela dos Navegantes, que foi construída em 1975 em homenagem a Iemanjá, está localizada na parte centra da faixa litorânea. A Área do Surf, ideal para quem gosta de se aventurar no mar, e fica mais a extrema direita da praia. Além disso, há uma região com bosque à beira mar, para quem gosta de fazer churrasco com os amigos e família. E para os mais aventureiros, há também a opção da Praia do Pontal do Cricaré, localizado a 14 km do Centro de Guriri, sendo necessário realizar uma pequena trilha para chegar a mesma.'
     
         card1()
         card2()
