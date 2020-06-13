@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
+        <link rel="shortcut icon" href="logo/LT-sombra.ico">
+
+        <title>Let's Travel</title>
+    </head>
+    <body class="bg-light" onload="verificarCategoria()">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-warning">
+
+                <div class="container">
+
+                    <a class="navbar-brand" href="index.html"><img src="logo/logoNome.png" alt="Logo Let's Travel" class="img"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSite">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Início</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" id="navDrop">Destinos</a>
+                              <div class="dropdown-menu">
+                                  <a href="categorias.html" class="dropdown-item" onclick="reset()">Todos os destinos</a>
+                                  <a href="categorias.html" class="dropdown-item" onclick="natureza()">Natureza</a>
+                                  <a href="categorias.html" class="dropdown-item" onclick="praia()">Praias</a>
+                                  <a href="categorias.html" class="dropdown-item" onclick="historico()">Históricos</a>
+                              </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobre.html">Sobre nós</a>
+                            </li>
+                        </ul>
+
+                        <form class="form-inline ml-3">
+                          <input type="search" class="form-control mr-1" placeholder="Buscar lugares..." list="sugestoes" id="busca">
+                          <button class="btn btn-light" type="submit" onclick="buscar()">Ir</button>
+                          <datalist id="sugestoes">
+                          </datalist>
+                      </form>
+
+                    </div>
+
+                </div>
+
+            </nav>
+        </header>
+
+        <div class="mt-5 mb-3 container">
+            <h1 class="h1 text-center" id="h1Cat">Descubra novos lugares</h1>
+        </div>
+
+        <section>
+          <div class="row no-gutters bg-secondary position-relative container mx-auto border mt-5 w-75 shadow" name="natureza">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/saltoGrande.jpg" class="img-thumbnail" alt="Salto Grande">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Cachoeira de Salto Grande</b></h4>
+              <p class="text-muted mt-0">Iconha - ES</p>
+              <p class="text-justify">Uma das inúmeras cachoeiras banhadas pelo Rio Iconha. Local perfeito para se livrar do estresse do dia a dia e poder aproveitar bastante o seu tempo livre com a família em meio a natureza.</p>
+              <a href="lugar.html" class="stretched-link" onclick="saltoGrande()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="praia">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/praiaDosNamorados.jpg" class="img-thumbnail" alt="Praia dos Namorados">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Praia dos Namorados</b></h4>
+              <p class="text-muted mt-0">Anchieta - ES</p>
+              <p>Uma das melhores praias do litoral Sul do Estado. Conta com um mar tranquilo com poucas ondas e não é tão profundo, ideal para a família se divertir sem preocupações.</p>
+              <a href="lugar.html" class="stretched-link" onclick="praidaDosNamorados()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto border mt-5 w-75 shadow" name="natureza">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/pauloCesar.jpg" class="img-thumbnail" alt="Paulo Cezar Vinha">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Parque Estadual Paulo César Vinha</b></h4>
+              <p class="text-muted mt-0">Guarapari - ES</p>
+              <p class="text-justify">Se você é daquelas pessoas aventureiras, que gostam de conhecer novos lugares, o Parque Estadual Paulo César Vinha é o local ideal para você.</p>
+              <a href="lugar.html" class="stretched-link" onclick="pauloCezar()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="praia">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/praiaDeUbu.jpg" class="img-thumbnail" alt="Praia de Ubu">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Praia de Ubu</b></h4>
+              <p class="text-muted mt-0">Anchieta - ES</p>
+              <p>A água que banha a praia possui uma linda cor azul, e a areia é ideal para as crianças poderem se divertir. Possui poucas ondas e uma longa extensão de areia.</p>
+              <a href="lugar.html" class="stretched-link" onclick="praiaDeUbu()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="historico">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/ruinasDeAnchieta.jpg" class="img-thumbnail" alt="Ruínas de Anchieta">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Ruínas do Rio Salinas</b></h4>
+              <p class="text-muted mt-0">Anchieta - ES</p>
+              <p>As Ruínas do Rio Salinas se situam em meio a natureza, ao lado do Rio Salinas, que é um dos afluentes do Rio Beneventes. Para chegar até as ruínas, pode se ir tanto pela estrada quanto por embarcação pelo rio.</p>
+              <a href="lugar.html" class="stretched-link" onclick="ruinas()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="historico">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/museuVale.jpg" class="img-thumbnail" alt="Museu Vale">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Museu Vale</b></h4>
+              <p class="text-muted mt-0">Vila Velha - ES</p>
+              <p>O Museu Vale possui um respeitado acervo com mais de cem anos de história, e também conta com um centro de artes contemporâneas. O lugar perfeito para você que gosta de admirar a nossa história.</p>
+              <a href="lugar.html" class="stretched-link" onclick="museuVale()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="natureza">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/picoDaBandeira2.jpg" class="img-thumbnail" alt="Pico da Bandeira">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Pico da Bandeira</b></h4>
+              <p class="text-muted mt-0">Alto Caparaó - MG / Ibitirama - ES</p>
+              <p>O Pico da Bandeira é uma divisa natural entre o município de Ibitirama, no Estado do Espírito Santo e do Alto Caparaó, no Estado de Minas Gerais. É o ponto mais alto dos dois Estados, bem como de toda a Região Sudeste do Brasil.</p>
+              <a href="lugar.html" class="stretched-link" onclick="picoDaBandeira()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="praia">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/praiaDosCastelhanos.jpg" class="img-thumbnail" alt="Praia dos Castelhanos">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Praia dos Castelhanos</b></h4>
+              <p class="text-muted mt-0">Anchieta - ES</p>
+              <p>A Praia dos Castelhanos é uma das praias mais urbanizadas do município de Anchieta. Com uma extensão de aproximadamente 2 km de um lindo litoral, a Praia dos Castelhanos conta com quiosques, casas e comércios em sua orla, sendo este um local de alta procura no verão.</p>
+              <a href="lugar.html" class="stretched-link" onclick="praiaDeCastelhanos()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="natureza">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/cahcoeiraMatilde.jpg" class="img-thumbnail" alt="Cachoeira de Matilde">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Cachoeira de Matilde</b></h4>
+              <p class="text-muted mt-0">Alfredo Chaves - ES</p>
+              <p>A Cachoeira de Matilde, também conhecida como Cachoeira do Engenheiro Reeve, possui a maior queda livre de água de todo o Estado do Espírito Santo. A Cachoeira de Matilde conta com uma maravilhosa vista de um vale, além de possuir várias trilhas pela floresta para chegar a outros pontos.</p>
+              <a href="lugar.html" class="stretched-link" onclick="cachoeiraDeMatilde()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="historico">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/mosteiro.jpg" class="img-thumbnail" alt="Mosteiro Zen Morro da Vargem">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Mosteiro Zen Morro da Vargem</b></h4>
+              <p class="text-muted mt-0">Ibiraçu - ES</p>
+              <p>O Mosteiro se encontra dentro de uma reserva da Mata Atlântica, no munícipio de Ibiraçu. O Mosteiro Zen Morro da Vargem, foi criado em 1974, sendo o primeiro mosteiro a ser construído no Estado do Espírito Santo.</p>
+              <a href="lugar.html" class="stretched-link" onclick="mosteiro()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="natureza">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/dunasDeItaúnas.jpg" class="img-thumbnail" alt="Dunas de Itaúnas">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Dunas de Itaúnas</b></h4>
+              <p class="text-muted mt-0">Itaúnas - ES</p>
+              <p>As Dunas de Itaúnas são consideradas Patrimônio Mundial da Humanidade pela UNESCO. As dunas começaram a se formar por volta da década de 70, e atualmente podem ter até 30 metros de altura. O local perfeito para você curtir uma nova experiência.</p>
+              <a href="lugar.html" class="stretched-link" onclick="dunasDeItaunas()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="natureza">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/zooMarechal.jpg" class="img-thumbnail" alt="Zoo Park da Montanha">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Zoo Park da Montanha</b></h4>
+              <p class="text-muted mt-0">Marechal Floriano - ES</p>
+              <p>Atualmente, o zoológico Zoo Park da Montanha é o único presente no Estado do Espírito Santo. O zoológico conta com a presença de maravilhosos felinos de grande porte, como leão e onças-pintadas, além de inúmeras outras espécies de animais.</p>
+              <a href="lugar.html" class="stretched-link" onclick="zoo()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="natureza">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/projetoTamar.jpg" class="img-thumbnail" alt="Projeto Tamar - Base Guriri">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Projeto Tamar - Base Guriri</b></h4>
+              <p class="text-muted mt-0">São Mateus - ES</p>
+              <p>Bem como outras bases do Projeto Tamar, a base de Guriri tem como objetivo a proteger as tartarugas marinhas ques estão a beira da extinçãono litoral brasileiro. Um ótimo lugar para levar a família para conhecer um pouco sobre a vida marinha.</p>
+              <a href="lugar.html" class="stretched-link" onclick="projetoTamar()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="historico">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/Palácio_Anchieta.jpg" class="img-thumbnail" alt="Pálacio Anchieta">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Pálacio Anchieta</b></h4>
+              <p class="text-muted mt-0">Vitória - ES</p>
+              <p>Localizado em frente ao Porto de Vitória, o Palácio Anchieta atualmente é a sede do poder executivo do Estado do Espírito Santo, mas não foi sempre assim. Este local foi originalmente uma igreja, depois um colégio, que foi passando por várias reformas até chegar ao ponto que conhecemos atualmente.</p>
+              <a href="lugar.html" class="stretched-link" onclick="palacioAnchieta()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="natureza">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/pedraAzul.jpg" class="img-thumbnail" alt="Parque Estadual Pedra Azul">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Parque Estadual Pedra Azul</b></h4>
+              <p class="text-muted mt-0">Domingos Martins - ES</p>
+              <p>O parque abriga um dos principais pontos turísticos do Estado do Espírito Santo, a Pedra Azul com cerca de 1822 metros de altura, sendo este um dos cartões postais mais imponentes de paisagem natural do Estado.</p>
+              <a href="lugar.html" class="stretched-link" onclick="pedraAzul()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="natureza">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/morroDoMoreno.jpg" class="img-thumbnail" alt="Morro do Moreno">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Morro do Moreno</b></h4>
+              <p class="text-muted mt-0">Vila Velha - ES</p>
+              <p>O Morro do Moreno era usado nos séculos anteriores para vigiar os navios que adentravam na Baía de Vitória. Atualmente, o Morro do Moreno é visitado por turístas para a realização de esportes, como trilhas, rapel, tirolesa e voo de parapente.</p>
+              <a href="lugar.html" class="stretched-link" onclick="morroDoMoreno()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="historico">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/farolSantaLuzia.jpg" class="img-thumbnail" alt="Farol de Santa Luzia">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Farol de Santa Luzia</b></h4>
+              <p class="text-muted mt-0">Vila Velha - ES</p>
+              <p>O Farol de Santa Luzia, possui 12 metros de altura e uma luz com capacidade luminosa de alcançar até 27,78 km de distância. O farol, inaugurado em 1871 pelo então Imperador Dom Pedro II.</p>
+              <a href="lugar.html" class="stretched-link" onclick="farol()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="historico">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/conventoDaPenha.jpg" class="img-thumbnail" alt="Convento da Penha">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Convento da Penha</b></h4>
+              <p class="text-muted mt-0">Vila Velha - ES</p>
+              <p>
+                O Convento da Penha teve a sua construção feita no alto de um penhasco de 154 metros de altitude por volta dos anos de 1558, sendo esta considerado um dos santuários religiosos mais antigos do Brasil.</p>
+              <a href="lugar.html" class="stretched-link" onclick="convento()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="natureza">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/pedraDaCebola.jpg" class="img-thumbnail" alt="Parque Pedra da Cebola">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Parque Pedra da Cebola</b></h4>
+              <p class="text-muted mt-0">Vitória - ES</p>
+              <p>Anos atrás, o local onde está localizado o Parque Pedra da Cebola era propriedade da mineradora Vale, conhecida como Pedreira de Goiabeiras. Em 1997 ocorreu a implantação do parque como forma de recuperação da área degradada por conta das ativades que eram realizadas.</p>
+              <a href="lugar.html" class="stretched-link" onclick="pedraDaCebola()"></a>
+            </div>
+          </div>
+
+          <div class="row no-gutters bg-secondary position-relative container mx-auto text-justify border mt-5 w-75 shadow" name="praia">
+            <div class="col-md-5 mb-md-0 p-md-4">
+              <img src="imgs/guriri.jpg" class="img-thumbnail" alt="Ilha de Guriri">
+            </div>
+            <div class="col-md-6 position-static p-4 pl-md-0">
+              <h4 class="title mb-0"><b>Ilha de Guriri</b></h4>
+              <p class="text-muted mt-0">São Mateus - ES</p>
+              <p>A Ilha de Guriri é a maior ilha do Estado do Espírito Santo, possuindo 102 km² de área e 42 km de extensão de praia. A ilha ainda conta com inúmeras outras atrações, como trilhas, áreas de surf e bosque com área para fazer churrasco.</p>
+              <a href="lugar.html" class="stretched-link" onclick="guriri()"></a>
+            </div>
+          </div>
+
+        </section>
+
+        <div class="text-center">
+          <a class="btn btn-dark mt-5 btn-lg" href="categorias.html" role="button" id="todosDestinos" onclick="reset()">Confira todos os nosso destinos</a>        
+        </div>
+
+        <footer class="bg-gradient-warning mt-5 p-4">
+          <div class="row">
+              <div class="col-sm-3 mx-auto">
+                  <p class="text-left text-white mb-0">Nos siga nas nossas redes sociais!</p>
+                  <a href="https://twitter.com/windsorloss" target="_blank">
+                      <i class="fab fa-twitter text-white">  &nbsp; letstravel</i>
+                  </a>
+
+                  <br>
+
+                  <a href="https://www.instagram.com/windsorloss/" target="_blank">
+                      <i class="fab fa-instagram text-white"> &nbsp; letstravel</i>
+                  </a> 
+
+                  <br>
+
+                  <a href="https://www.facebook.com/windsor.lossassismonteiro" target="_blank">
+                      <i class="fab fa-facebook text-white"> &nbsp; letstravel</i>
+                  </a>
+              </div>
+              <div class="col-sm-2 mx-auto">
+                  <p class="text-left text-white mb-0">Contatos</p>
+                  <i class="fas fa-phone text-white mb-2"> &nbsp; (28) 5555 - 5555</i>
+                  <i class="fas fa-map-pin text-white"> &nbsp; Rua Lorem - Ipsum - 7070</i>
+              </div>
+          </div>
+      </footer>
+
+        <!-- Optional JavaScript -->
+        <script src="script.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    </body>
+</html>

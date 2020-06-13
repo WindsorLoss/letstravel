@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
+        <link rel="shortcut icon" href="logo/LT-sombra.ico">
+
+        <title>Let's Travel</title>
+    </head>
+    <body class="bg-secondary" onload="reset()">
+
+        <!-- NAVBAR -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-warning">
+
+                <div class="container">
+
+                    <a class="navbar-brand" href="#"><img src="logo/logoNome.png" alt="Logo Let's Travel" class="img"></a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSite">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active">Início</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" id="navDrop">Destinos</a>
+                                <div class="dropdown-menu">
+                                    <a href="categorias.html" class="dropdown-item" onclick="reset()">Todos os destinos</a>
+                                    <a href="categorias.html" class="dropdown-item" onclick="natureza()">Natureza</a>
+                                    <a href="categorias.html" class="dropdown-item" onclick="praia()">Praias</a>
+                                    <a href="categorias.html" class="dropdown-item" onclick="historico()">Históricos</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobre.html">Sobre nós</a>
+                            </li>
+                        </ul>
+
+                        <form class="form-inline ml-3">
+                            <input type="search" class="form-control mr-1" placeholder="Buscar lugares..." list="sugestoes" id="busca">
+                            <button class="btn btn-light" type="submit" onclick="buscar()">Ir</button>
+                            <datalist id="sugestoes">
+                            </datalist>
+                        </form>
+                         
+                    </div>
+                </div>
+
+            </nav>
+            <ul class="list-group" id="list"></ul>
+
+        </header>
+
+        <div id="carouselSite" class="carousel slide" data-ride="carousel">
+            
+            <ol class="carousel-indicators">
+                <li data-target="#carouselSite" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselSite" data-slide-to="1"></li>
+                <li data-target="#carouselSite" data-slide-to="2"></li>
+            </ol>
+
+            <!-- DIV DAS IMAGENS DO CAROUSEL -->
+            <div class="carousel-inner"> 
+
+                <div class="carousel-item active">
+                    <a href="categorias.html" onclick="natureza()"><img src="imgs/carousel/cr1.png" class="img-fluid d-block"></a>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="categorias.html" onclick="praia()"><img src="imgs/carousel/cr2.png" class="img-fluid d-block"></a>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="categorias.html" onclick="historico()"><img src="imgs/carousel/cr3.png" class="img-fluid d-block"></a>
+                </div>
+
+                <a href="#carouselSite" class="carousel-control-prev" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a href="#carouselSite" class="carousel-control-next" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+
+            </div>
+
+        </div>    
+        
+        <!-- PRIMEIROS CARDS -->
+        <div class="mt-5 mb-3">
+            <h1 class="h1 text-center">Queridinhos dos nossos usuários</h1>
+        </div>
+
+        <div class="row mb-5 container mx-auto">
+
+            <div class="col-sm-4">
+                <div class="card shadow ">
+
+                    <img src="imgs/picoDaBandeira2.jpg" alt="Pico da Bandeira" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0">Pico da Bandeira</h4>
+                        <p class="card-subtitle text-muted mb-2">Alto Caparaó - MG / Ibitirama - ES</p>
+                        <p class="card-text">O Pico da Bandeira é uma divisa natural entre o município de Ibitirama, no Estado do Espírito Santo e do Alto Caparaó, no Estado de Minas Gerais.</p>
+                        <a href="lugar.html" class="stretched-link" onclick="picoDaBandeira()"></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card shadow">
+
+                    <img src="imgs/ruinasDeAnchieta.jpg" alt="Ruínas de Anchieta" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0">Ruínas do Rio Salinas</h4>
+                        <p class="card-subtitle text-muted mb-2">Anchieta - ES</p>
+                        <p class="card-text">As Ruínas do Rio Salinas se situam em meio a natureza, ao lado do Rio Salinas, que é um dos afluentes do Rio Beneventes.</p>
+                        <a href="lugar.html" class="stretched-link" onclick="ruinas()"></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card shadow">
+
+                    <img src="imgs/praiaDeUbu.jpg" alt="Praia de Ubu" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0">Praia de Ubu</h4>
+                        <p class="card-subtitle text-muted mb-2">Anchieta - ES</p>
+                        <p class="card-text">A água que banha a praia possui uma linda cor azul, e a areia é ideal para as crianças poderem se divertir.</p>
+                        <a href="lugar.html" class="stretched-link" onclick="praiaDeUbu()"></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mb-5 container mx-auto">
+
+            <div class="col-sm-4">
+                <div class="card shadow ">
+
+                    <img src="imgs/saltoGrande.jpg" alt="Cachoeira de Salto Grande" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0">Cachoeira de Salto Grande</h4>
+                        <p class="card-subtitle text-muted mb-2">Iconha - ES</p>
+                        <p class="card-text ">Uma das inúmeras cachoeiras banhadas pelo Rio Iconha. Local perfeito para se livrar do estresse do dia a dia.</p>
+                        <a href="lugar.html" class="stretched-link" onclick="saltoGrande()"></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card shadow">
+
+                    <img src="imgs/praiaDosNamorados.jpg" alt="Praia dos Namorados" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0">Praia dos Namorados</h4>
+                        <p class="card-subtitle text-muted mb-2">Anchieta - ES</p>
+                        <p class="card-text">Uma das melhores praias do litoral Sul do Estado. Conta com um mar tranquilo e não tão profundo, ideal para a família se divertir.</p>
+                        <a href="lugar.html" class="stretched-link" onclick="praidaDosNamorados()"></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card shadow">
+
+                    <img src="imgs/dunasDeItaúnas.jpg" alt="Dunas de Itaúnas" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0">Dunas de Itaúnas</h4>
+                        <p class="card-subtitle text-muted mb-2">Itaúnas - ES</p>
+                        <p class="card-text">As Dunas de Itaúnas são consideradas Patrimônio Mundia da Humanidade pela UNESCO. As dunas começaram a se formar por volta da década de 70, e atualmente podem ter até 30 metros de altura.</p>
+                        <a href="lugar.html" class="stretched-link" onclick="dunasDeItaunas()"></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- SEGUNDA PARTE DE CARDS -->
+        <div class="mt-4 mb-3">
+            <h1 class="h1 text-center">Separados por nossa equipe para você</h1>
+        </div>
+
+        <div class="row mb-5 container mx-auto">
+
+            <div class="col-sm-4">
+                <div class="card shadow">
+
+                    <img src="imgs/museuVale.jpg" alt="Museu Vale" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0">Museu Vale</h4>
+                        <p class="card-subtitle text-muted mb-2">Vila Velha - ES</p>
+                        <p class="card-text">O Museu Vale possui um respeitado acervo com mais de cem anos de história, e também conta com um centro de artes contemporâneas. O lugar perfeito para você que gosta de admirar a nossa história.</p>
+                        <a href="lugar.html" class="stretched-link" onclick="museuVale()"></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card shadow">
+
+                    <img src="imgs/cahcoeiraMatilde.jpg" alt="Cachoeira de Matilde" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0">Cachoeira de Matilde</h4>
+                        <p class="card-subtitle text-muted mb-2">Alfredo Chaves - ES</p>
+                        <p class="card-text">A Cachoeira de Matilde, também conhecida como Cachoeira do Engenheiro Reeve, possui a maior queda livre de água de todo o Estado do Espírito Santo.</p>
+                        <a href="lugar.html" class="stretched-link" onclick="cachoeiraDeMatilde()"></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card shadow">
+
+                    <img src="imgs/pauloCesar.jpg" alt="Parque Estadual Paulo Cezar Vinha" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0">Parque Estadual Paulo César Vinha</h4>
+                        <p class="card-subtitle text-muted mb-2">Guarapari - ES</p>
+                        <p class="card-text">Se você é daquelas pessoas aventureiras, que gostam de conhecer novos lugares, o Parque Estadual Paulo César Vinha é o local ideal para você.</p>
+                        <a href="lugar.html" class="stretched-link" onclick="pauloCezar()"></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mb-5 container mx-auto">
+
+            <div class="col-sm-4">
+                <div class="card shadow">
+
+                    <img src="imgs/praiaDosCastelhanos.jpg" alt="Praia dos Castelhanos" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0">Praia dos Castelhanos</h4>
+                        <p class="card-subtitle text-muted mb-2">Anchieta - ES</p>
+                        <p class="card-text">A Praia dos Castelhanos é uma das praias mais urbanizadas do município de Anchieta. Com uma extensão de aproximadamente 2 km de um lindo litoral, para você poder aproveitar bastante com toda a sua família.</p>
+                        <a href="lugar.html" class="stretched-link" onclick="praiaDeCastelhanos()"></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card shadow">
+
+                    <img src="imgs/zooMarechal.jpg" alt="Zoo Park da Montanha" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0">Zoo Park da Montanha</h4>
+                        <p class="card-subtitle text-muted mb-2">Marechal Floriano - ES</p>
+                        <p class="card-text">Atualmente, o zoológico Zoo Park da Montanha é o único presente no Estado do Espírito Santo.</p>
+                        <a href="lugar.html" class="stretched-link" onclick="zoo()"></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card shadow">
+
+                    <img src="imgs/projetoTamar.jpg" alt="Projeto Tamar - Base Guriri" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title mb-1">Projeto Tamar - Base Guriri</h4>
+                        <p class="card-subtitle text-muted mb-2">São Mateus - ES</p>
+                        <p class="card-text">Bem como outras bases do Projeto Tamar, a base de Guriri tem como objetivo a proteger as tartarugas marinhas ques estão a beira da extinçãono litoral brasileiro.</p>
+                        <a href="lugar.html" class="stretched-link" onclick="projetoTamar()"></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center">
+            <a class="btn btn-dark btn-lg" href="categorias.html" role="button">Confira todos os nosso destinos</a>        
+        </div>
+
+        <footer class="bg-gradient-warning mt-5 p-4">
+            <div class="row">
+                <div class="col-sm-3 mx-auto">
+                    <p class="text-left text-white mb-0">Nos siga nas nossas redes sociais!</p>
+                    <a href="https://twitter.com/windsorloss" target="_blank">
+                        <i class="fab fa-twitter text-white">  &nbsp; letstravel</i>
+                    </a>
+
+                    <br>
+
+                    <a href="https://www.instagram.com/windsorloss/" target="_blank">
+                        <i class="fab fa-instagram text-white"> &nbsp; letstravel</i>
+                    </a> 
+
+                    <br>
+
+                    <a href="https://www.facebook.com/windsor.lossassismonteiro" target="_blank">
+                        <i class="fab fa-facebook text-white"> &nbsp; letstravel</i>
+                    </a>
+                </div>
+                <div class="col-sm-2 mx-auto">
+                    <p class="text-left text-white mb-0">Contatos</p>
+                    <i class="fas fa-phone text-white mb-2"> &nbsp; (28) 5555 - 5555</i>
+                    <i class="fas fa-map-pin text-white"> &nbsp; Rua Lorem - Ipsum - 7070</i>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Optional JavaScript -->
+        <script src="script.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    </body>
+</html>

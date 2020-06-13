@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
+        <link rel="shortcut icon" href="logo/LT-sombra.ico">
+
+        <title>Let's Travel</title>
+    </head>
+    <body onload="verificarLocal()">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-warning">
+
+                <div class="container">
+
+                    <a class="navbar-brand" href="index.html"><img src="logo/logoNome.png" alt="Logo Let's Travel" class="img"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSite">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Início</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" id="navDrop">Destinos</a>
+                                <div class="dropdown-menu">
+                                    <a href="categorias.html" class="dropdown-item" onclick="reset()">Todos os destinos</a>
+                                    <a href="categorias.html" class="dropdown-item" onclick="natureza()">Natureza</a>
+                                    <a href="categorias.html" class="dropdown-item" onclick="praia()">Praias</a>
+                                    <a href="categorias.html" class="dropdown-item" onclick="historico()">Históricos</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobre.html">Sobre nós</a>
+                            </li>
+                        </ul>
+
+                        <form class="form-inline ml-3">
+                            <input type="search" class="form-control mr-1" placeholder="Buscar lugares..." list="sugestoes" id="busca">
+                            <button class="btn btn-light" type="submit" onclick="buscar()">Ir</button>
+                            <datalist id="sugestoes">
+                            </datalist>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </nav>
+        </header>
+        
+        <section class="container my-5">
+            <div class="row">
+                <div class="col-7 mr-0">
+                    <div id="carouselSite" class="carousel slide d-fluid" data-ride="carousel">
+                    
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselSite" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselSite" data-slide-to="1"></li>
+                            <li data-target="#carouselSite" data-slide-to="2"></li>
+                        </ol>
+            
+                        <!-- DIV DAS IMAGENS DO CAROUSEL -->
+                        <!-- Caso esteja lendo isso, as imagens encaixam perfeitamente no tamanho md, no lg elas ficam com um gap ao lado dos botões -->
+                        <div class="carousel-inner"> 
+            
+                            <div class="carousel-item active">
+                                <img class="img-fluid d-block mx-auto" id="img1">
+                            </div>
+            
+                            <div class="carousel-item">
+                                <img class="img-fluid d-block mx-auto" id="img2">
+                            </div>
+            
+                            <div class="carousel-item">
+                                <img class="img-fluid d-block mx-auto" id="img3">
+                            </div>
+            
+                            <a href="#carouselSite" class="carousel-control-prev d-fluid" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                            <a href="#carouselSite" class="carousel-control-next d-fluid" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                                <span class="sr-only">Próximo</span>
+                            </a>
+            
+                        </div>
+            
+                    </div>
+                </div> 
+                <div class="col">
+                    <h4 class="h4 mb-0" id="tituloLugar">nome</h4>
+                    <p class="text-muted mt-0 ml-1" id="subtituloLugar">cidade</p>
+                    <span class="font-weight-bold">Horário de funcionamento: </span><p id="horario" class="my-0"></p>
+                    <span class="font-weight-bold">Endereço: </span><p id="endereco" class="my-0">endereco</p>
+                    <p id="distancia" class="my-0">distancia da capital</p>
+                    <a class="btn btn-success btn-sm text-white mt-2" role="button" id="mapa" target="_blank">Ver no mapa</a> 
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <div class="container">
+            <p class="text-break container-sm text-justify" id="descricao"></p>
+        </div>
+
+        <hr>
+
+        <div class="row mt-4 container mx-auto">
+
+            <div class="col-sm-4">
+                <div class="card shadow ">
+
+                    <img  class="card-img-top" id="imgCard1">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0" id="nomeCard1">nome card</h4>
+                        <p class="card-subtitle text-muted mb-2" id="lugarCard1">lugar card</p>
+                        <p class="card-text text-justify" id="descricaoCard1">descrição card</p>
+                        <a href="lugar.html" class="stretched-link" id="aCard1"></a> 
+                        <!-- tem q colocar a função do lugar no a -->
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card shadow ">
+
+                    <img  class="card-img-top" id="imgCard2">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0" id="nomeCard2">nome card</h4>
+                        <p class="card-subtitle text-muted mb-2" id="lugarCard2">lugar card</p>
+                        <p class="card-text text-justify" id="descricaoCard2">descrição card</p>
+                        <a href="lugar.html" class="stretched-link" id="aCard2"></a> 
+                        <!-- tem q colocar a função do lugar no a -->
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card shadow ">
+
+                    <img  class="card-img-top" id="imgCard3">
+                    <div class="card-body">
+                        <h4 class="card-title mb-0" id="nomeCard3">nome card</h4>
+                        <p class="card-subtitle text-muted mb-2" id="lugarCard3">lugar card</p>
+                        <p class="card-text text-justify" id="descricaoCard3">descrição card</p>
+                        <a href="lugar.html" class="stretched-link" id="aCard3"></a> 
+                        <!-- tem q colocar a função do lugar no a -->
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center">
+            <a class="btn btn-dark mt-5 btn-lg" href="categorias.html" role="button" id="todosDestinos" onclick="reset()">Ver outros destinos</a>        
+        </div>
+
+        <footer class="bg-gradient-warning mt-5 p-4">
+            <div class="row">
+                <div class="col-sm-3 mx-auto">
+                    <p class="text-left text-white mb-0">Nos siga nas nossas redes sociais!</p>
+                    <a href="https://twitter.com/windsorloss" target="_blank" class="ml-2">
+                        <i class="fab fa-twitter text-white">  &nbsp; letstravel</i>
+                    </a>
+
+                    <br>
+
+                    <a href="https://www.instagram.com/windsorloss/" target="_blank" class="ml-2">
+                        <i class="fab fa-instagram text-white"> &nbsp; letstravel</i>
+                    </a> 
+
+                    <br>
+
+                    <a href="https://www.facebook.com/windsor.lossassismonteiro" target="_blank" class="ml-2">
+                        <i class="fab fa-facebook text-white"> &nbsp; letstravel</i>
+                    </a>
+                </div>
+                <div class="col-sm-2 mx-auto">
+                    <p class="text-left text-white mb-0">Contatos</p>
+                    <i class="fas fa-phone text-white mb-2"> &nbsp; (28) 5555 - 5555</i>
+                    <i class="fas fa-map-pin text-white"> &nbsp; Rua Lorem - Ipsum - 7070</i>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Optional JavaScript -->
+        <script src="script.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    </body>
+</html>
