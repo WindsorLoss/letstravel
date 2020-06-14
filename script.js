@@ -88,7 +88,7 @@ const cards = [  //INFORMAÇÕES Q VÃO ESTAR PRESENTES NA PÁGINA LUGAR
     nome: 'Dunas de Itaúnas',
     lugar: 'Itaúnas - ES',
     img: 'imgs/dunasDeItaúnas.jpg',
-    descricao: 'As Dunas de Itaúnas são consideradas Patrimônio Mundia da Humanidade pela UNESCO. As dunas começaram a se formar por volta da década de 70, e atualmente podem ter até 30 metros de altura.',
+    descricao: 'As Dunas de Itaúnas são consideradas Patrimônio Mundial da Humanidade pela UNESCO. As dunas começaram a se formar por volta da década de 70, e atualmente podem ter até 30 metros de altura.',
     funcao: 'dunasDeItaunas()'
     },
 
@@ -120,7 +120,7 @@ const cards = [  //INFORMAÇÕES Q VÃO ESTAR PRESENTES NA PÁGINA LUGAR
     nome: 'Projeto Tamar - Base Guriri',
     lugar: 'São Mateus - ES',
     img: 'imgs/projetoTamar.jpg',
-    descricao: 'Bem como outras bases do Projeto Tamar, a base de Guriri tem como objetivo a proteger as tartarugas marinhas ques estão a beira da extinçãono litoral brasileiro.',
+    descricao: 'Bem como outras bases do Projeto Tamar, a base de Guriri tem como objetivo proteger as tartarugas marinhas que estão a beira da extinção no litoral brasileiro.',
     funcao: 'projetoTamar()'
     },
 
@@ -143,33 +143,40 @@ const cards = [  //INFORMAÇÕES Q VÃO ESTAR PRESENTES NA PÁGINA LUGAR
 
 //FUNÇÕES PARA ESCOLHER UM CARD ALEATÓRIO DA CONST CARDS
 
-function card1() {
-    var pos = Math.floor(Math.random() * cards.length)    
-    nomeCard1.innerHTML = cards[pos].nome
-    lugarCard1.innerHTML = cards[pos].lugar
-    descricaoCard1.innerHTML = cards[pos].descricao
-    imgCard1.setAttribute('src', `${cards[pos].img}`)
-    aCard1.setAttribute('onclick', `${cards[pos].funcao}`)
-}
+function cardsFinais() {
+    var pos1 = Math.floor(Math.random() * cards.length)  
+    var pos2 = Math.floor(Math.random() * cards.length)  
+    var pos3 = Math.floor(Math.random() * cards.length)  
 
-function card2() {
-    var pos = Math.floor(Math.random() * cards.length)
-    nomeCard2.innerHTML = cards[pos].nome
-    lugarCard2.innerHTML = cards[pos].lugar
-    descricaoCard2.innerHTML = cards[pos].descricao
-    imgCard2.setAttribute('src', `${cards[pos].img}`)
-    aCard2.setAttribute('onclick', `${cards[pos].funcao}`)
-}
+    if(pos2 == pos1)
+    {
+        cardsFinais()
+        return pos2
+    }
+    else if(pos3 == pos2 || pos3 == pos1)
+    {
+        cardsFinais()
+        return pos3
+    }
 
-function card3() {
-    var pos = Math.floor(Math.random() * cards.length)
-    nomeCard3.innerHTML = cards[pos].nome
-    lugarCard3.innerHTML = cards[pos].lugar
-    descricaoCard3.innerHTML = cards[pos].descricao
-    imgCard3.setAttribute('src', `${cards[pos].img}`)
-    aCard3.setAttribute('onclick', `${cards[pos].funcao}`)
-}
+    nomeCard1.innerHTML = cards[pos1].nome
+    lugarCard1.innerHTML = cards[pos1].lugar
+    descricaoCard1.innerHTML = cards[pos1].descricao
+    imgCard1.setAttribute('src', `${cards[pos1].img}`)
+    aCard1.setAttribute('onclick', `${cards[pos1].funcao}`)
 
+    nomeCard2.innerHTML = cards[pos2].nome
+    lugarCard2.innerHTML = cards[pos2].lugar
+    descricaoCard2.innerHTML = cards[pos2].descricao
+    imgCard2.setAttribute('src', `${cards[pos2].img}`)
+    aCard2.setAttribute('onclick', `${cards[pos2].funcao}`)
+
+    nomeCard3.innerHTML = cards[pos3].nome
+    lugarCard3.innerHTML = cards[pos3].lugar
+    descricaoCard3.innerHTML = cards[pos3].descricao
+    imgCard3.setAttribute('src', `${cards[pos3].img}`)
+    aCard3.setAttribute('onclick', `${cards[pos3].funcao}`)
+}
 
 // Salva a variavel destinho no local storage como um arquivo JSON
 function saveToStorage(){
@@ -255,10 +262,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/H47ALRxKMjaCSxag7')
         descricao.innerHTML = 'A Cachoeira de Salto Grande é a escolha ideal para passar aquele desejado final de semana tranquilo com toda a família. A cachoeira oferece a chance de se banhar na maravilhosa água do Rio Iconha, além de também possuir uma área para camping, para aqueles que querem aproveitar por mais tempo as maravilhas que este local tem a oferecer. '
 
-                
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 2)  //PRAIA DOS NAMORADOS
     {
@@ -274,9 +278,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/4C6P48UtueNTjjPP9')
         descricao.innerHTML = 'Escolhida a dedo por nossa equipe, a Praia dos Namorados foi eleita a melhor das praias do Balneário de Iriri. Localizada mais distante do início do balneário, a praia é uma das mais tranquilas da região. Com ondas na medida certa e não sendo tão profunda, toda a família pode aproveitar da diversão sem se preocupar demais. Ela também possui um costão no qual é possível ver tartarugas em certos períodos do ano.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 3)  //PAULO CEZAR
     {
@@ -292,9 +294,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/k1jpZvMQhdkcU8Dj7')
         descricao.innerHTML = 'Se você é daquelas pessoas aventureiras, que gostam de conhecer novos lugares, o Parque Estadual Paulo César Vinha é o local ideal para você. O parque ainda possui de um lado, água do mar, e do outro, água de uma incrível lagoa, perfeito para as pessoas que são indecisas. E como se isso já não fosse o bastante, no parque você ainda pode realizar trilhas e passeios de caiaque.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 4)  //UBU
     {
@@ -310,9 +310,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/nH9amhwV5vNCgMH58')
         descricao.innerHTML = 'A Praia de Ubu é conhecida como uma das praias urbanizadas mais tranquilas da cidade de Anchieta - ES. É uma praia extensa, com pouca agitação mas com bastante conforto. A água que banha a praia possui uma linda cor azul, e a areia é ideal para as crianças poderem se divertir. Possui quiosques ao longo de toda a extenção da praia, com comidas mais típicas da região.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 5)  //RUINAS
     {
@@ -328,9 +326,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/hPj9JgHVFqyfi5sP6')
         descricao.innerHTML = 'As Ruínas do Rio Salinas se situam em meio a natureza, ao lado do Rio Salinas, que é um dos afluentes do Rio Beneventes. Para chegar até as ruínas, pode-se ir pela estrada ou por meio de embarcações que passam pelo Rio Benevides, que se torna outro passeio por si só, pois é possível admirar toda a exuberância da fauna e flora do manguezal que cerca o rio. Umas das hipóteses mais aceitas era que as ruínas seriam o início de uma igreja que os jesuítas presentes na época queriam construir, pois nessa região haviam muitos povos indígenas.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 6)  //MUSEU VALE
     {
@@ -346,9 +342,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/BA9xU9o1HeJ52oAK9')
         descricao.innerHTML = 'O Museu Vale, inaugurado em 15 de outubro de 1998, está situado na Baía de Vitória, na Antiga Estação Ferroviária Pedro Nolasco. Desde a sua fundação, o Museu Vale vem agindo continuamente, realizando ações, projetos e programas socias nas regiões onde a Vale atua. Além de conter um acerco de mais de cem anos de história, o Museu ainda conta com um centro de artes contemporâneas, com obras de artistas consagrados e de novos talentos.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 7)  //PICO DA BANDEIRA
     {
@@ -364,9 +358,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/wBNVUhdF9fJF2KkW6')
         descricao.innerHTML = 'O Pico da Bandeira é uma divisa natural entre o município de Ibitirama, no Estado do Espírito Santo e do Alto Caparaó, no Estado de Minas Gerais. É o ponto mais alto dos dois Estados, bem como de toda a Região Sudeste do Brasil. Além disso, é o terceiro ponto mais alto do Brasil, com cerca de 2891 metros de altitude. O pico recebeu esse nome, pois em meados do século XIX, o então imperador Dom Pedro II ordenou que fosse colocado uma bandeira do Império no cume do monte, que na época era considerado o maior do Brasil.'
 
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 8)  //CASTELHANOS
     {
@@ -382,9 +374,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/j7oHVqpP42MWTej18')
         descricao.innerHTML = 'A Praia dos Castelhanos é uma das praias mais urbanizadas do município de Anchieta. Com uma extensão de aproximadamente 2 km de um lindo litoral, a Praia dos Castelhanos conta com quiosques, casas e comércios em sua orla, sendo este um local de alta procura no verão. Ainda no verão, a praia serve de palco para diversos eventos organizados para os turistas poderem aproveitar bastante toda a beleza que essa praia tem a oferecer.'
         
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 9)  //MATILDE
     {
@@ -400,9 +390,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/xGp6yXenPiUKZqFx5')
         descricao.innerHTML = 'A Cachoeira de Matilde, também conhecida como Cachoeira do Engenheiro Reeve, possui a maior queda livre de água de todo o Estado do Espírito Santo. É possível seguir uma trilha, que fica logo depois do mirante da cachoeira e chegar até por de trás dela, ou se preferir, tomar um banho na lagoa formada pela mesma. Nas redondezas da cachoeira, você também pode visitar uma antiga estação ferroviária que foi construída pelos imigrantes da região.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 10)  //PALACIO ANCHIETA
     {
@@ -418,9 +406,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/yn226DvKqinQanUs9')
         descricao.innerHTML = 'Localizado em frente ao Porto de Vitória, o Palácio Anchieta atualmente é a sede do poder executivo do Estado do Espírito Santo, mas não foi sempre assim. Em 1551, o ano de sua construção, o local havia sido construído como um conjunto formado pela Igreja de São Tiago e pelo Colégio dos Jesuítas. Porém, anos mais tarde o local sofre um incêndio que destroi a parte da igreja, sendo reformada mais tarde como a Casa de São Tiago, com um colégio e seminário. Em 1945 o Palácio recebe o nome de Anchieta em homenagem ao padre, que foi um dos responsáveis pela a reforma do colégio no século XVI.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 11)  //DUNAS
     {
@@ -436,9 +422,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/YPKEGjyHiFahuS486')
         descricao.innerHTML = 'As Dunas de Itaúnas são consideradas Patrimônio Mundial da Humanidade pela UNESCO. As dunas começaram a se formar por volta da década de 70, e atualmente podem ter até 30 metros de altura. Ainda nas dunas, você tem a possibilidade de pagar por um passei de bugue, que o leva pelas redondezas das dunas. Como se tudo isso já não fosse o suficiente, o pôr-do-sol é a coisa mais linda do local, atraindo turistas de diversos locais para tirar as famosas fotos com o sol se pondo.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 12)  //ZOO
     {
@@ -454,9 +438,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/oRbfEg2earyaMf1s5')
         descricao.innerHTML = 'Atualmente, o zoológico Zoo Park da Montanha é o único presente no Estado do Espírito Santo. Desde 2012, o ano em que o zoológico foi fundado, ele já conta com as espécies mais variadas de animais, desde aves a primatas, e agora, também já possui felinos de grande porte, como leão e onças-pintadas. Outra parte que chama muito a atenção dos visitantes é a ala dos répteis, que conta com incríveis cobras, serpentes e largatos'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 13)  //TAMAR
     {
@@ -472,9 +454,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/qEtUijPSLrJC2oC67')
         descricao.innerHTML = 'Bem como outras bases do Projeto Tamar, a base de Guriri tem como objetivo proteger as tartarugas marinhas que estão a beira da extinção no litoral brasileiro. Atualmente, o Projeto Tamar não se restinge mais a conservação apenas das tartarugas, mas também de tubarões e de outras espécies de vida marinha. Poucos anos atrás, a base de Guriri passou por uma reforma e agora também conta com espaço onde são ministradas palestras voltadas ao meio ambiente como um todo.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 14)  //MOSTEIRO
     {
@@ -490,9 +470,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/n3C1MnYhMQvzMqw1A')
         descricao.innerHTML = 'O Mosteiro se encontra dentro de uma reserva da Mata Atlântica, no munícipio de Ibiraçu. O Mosteiro Zen Morro da Vargem, foi criado em 1974, sendo o primeiro mosteiro a ser construído no Estado do Espírito Santo. O Mosteiro possui diversos templos, dentre eles: Oração, Alimentação, Mortos, Meditação e entre outros. O Mosteiro tem como objetivo além das atividades espirituais, vários programas de educação ambiental, social e cultura, focados em diversas camadas da sociedade, como crianças, adultos, e até mesmo polícias e bombeiros.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 15)  //PEDRA AZUL
     {
@@ -508,9 +486,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/b1vXYmYNGuJguD776')
         descricao.innerHTML = 'A antiga Reserva Florestal de Pedra Azul, criada em 1960, foi transformada em Parque Estadual da Pedra Azul, no ano de 1991. O parque abriga um dos principais pontos turísticos do Estado do Espírito Santo, a Pedra Azul com cerca de 1822 metros de altura, sendo este um dos cartões postais mais imponentes de paisagem natural do Estado. Juntamente com a Pedra Azul, há a Pedra do Lagarto, compondo assim um belo cenário natural. Além disso, o parque também abriga diversas espécies vegetais, desde orquídeas e bromélias a cássias e ipês.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 16)  //MORRO DO MORENO
     {
@@ -526,9 +502,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/9p4h12a2V1qiT5Yv5')
         descricao.innerHTML = 'O Morro do Moreno era usado nos séculos anteriores para vigiar os navios que adentravam na Baía de Vitória. Atualmente, o Morro do Moreno é visitado por turístas para a realização de esportes, como trilhas, rapel, tirolesa e voo de parapente. Além do destino principal, o topo do morro (Barriga), ainda há outros setores, como a Testa da Macaca e a Boca da Macaca. Esses setores receberam esses nomes porque a visão lateral do morro parece uma macaca grávida. A trilha até o setor da Barriga possui cerca de 1,3 km de extensão, sendo esta a maior trilha entre os setores.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 17)  //FAROL
     {
@@ -544,9 +518,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/cvFqmPxBVoDB4Td89')
         descricao.innerHTML = 'O Farol de Santa Luzia, possui 12 metros de altura e uma luz com capacidade luminosa de alcançar até 27,78 km de distância. O farol, inaugurado em 1871 pelo então Imperador Dom Pedro II, tem por objetivo orientar as embarcações que normalmente transitam entre os portos de Vitória, Vila Velha e Tubarão. O farol é uma área de segurança por pertencer à Capitania dos Portos, e devido à isso, o local não deveria permitir transitação civil, porém a Secretaria de Desenvolvimento de Vila Velha possibilitou a abertura para visitação do farol, com o limite de 25 pessoas por vez, podendo permanecer somente 20 minutos no local.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 18)  //CONVENTO
     {
@@ -562,9 +534,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/gPJF1mU3GrVm6Cud9')
         descricao.innerHTML = 'O Convento da Penha teve a sua construção feita no alto de um penhasco de 154 metros de altitude por volta dos anos de 1558, sendo este considerado um dos santuários religiosos mais antigos do Brasil. O convento foi tombado como patrimônio histórico cultural pelo Instituto do Patrimônio Histórico e Artístico Nacional, em 1943. O complexo do convento abriga vários outros atrativos, como a Gruta do Frei Pedro Palácios e o largo do convento, além do Museu. No Altar Mor da Igreja, há mais de 200 peças de 19 tipos diferentes de mármore que adornam o retábulo e colunas.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 19)  //PEDRA DA CEBOLA
     {
@@ -580,9 +550,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/5L8mgoourtTTEyht6')
         descricao.innerHTML = 'Anos atrás, o local onde está localizado o Parque Pedra da Cebola era propriedade da mineradora Vale, conhecida como Pedreira de Goiabeiras. Em 1997 ocorreu a implantação do parque como forma de recuperação da área degradada por conta das ativades que eram realizadas. O parque recebeu esse nome devido ao formato de uma grande pedra que lembra o formato de uma cebola. O parque ainda conta com a presença de um jardim oriental, que é usado para realizar meditações, e um mirante, com vista para parte do Maciço Central, o Porto de Tubarão e o Morro do Mestre Álvaro.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
     else if(lugar == 20)  //GURIRI
     {
@@ -598,9 +566,7 @@ function verificarLocal(){ //Verifica qual foi o local clicado pelo usuário e c
         mapa.setAttribute('href', 'https://goo.gl/maps/d3YMLY1R2SPAuf6f9')
         descricao.innerHTML = 'A Ilha de Guriri é a maior ilha do Estado do Espírito Santo, possuindo 102 km² de área e 42 km de extensão de praia. A Capela dos Navegantes, que foi construída em 1975 em homenagem a Iemanjá, está localizada na parte centra da faixa litorânea. A Área do Surf, ideal para quem gosta de se aventurar no mar, e fica mais a extrema direita da praia. Além disso, há uma região com bosque à beira mar, para quem gosta de fazer churrasco com os amigos e família. E para os mais aventureiros, há também a opção da Praia do Pontal do Cricaré, localizado a 14 km do Centro de Guriri, sendo necessário realizar uma pequena trilha para chegar a mesma.'
     
-        card1()
-        card2()
-        card3()
+        cardsFinais()
     }
 }
 
