@@ -2,7 +2,7 @@
 
 This website is a tourist guide about the most incredible places in the state of Espírito Santo - Brazil.
 
-On it, you can find infos about the place, opening hours and its location on the map.
+On it, you can find information about the place, opening hours and its location on the map.
 
 
 ## Background
